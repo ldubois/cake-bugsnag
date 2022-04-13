@@ -3,13 +3,13 @@
     "description": "bugsnag plugin for CakePHP4",
     "type": "cakephp-plugin",
     "require": {
-        "php": "^7.1",
+        "php": "^8.0",
         "cakephp/cakephp": "^4.0",
         "bugsnag/bugsnag": "^3.0"
     },
     "require-dev": {
         "cakephp/cakephp-codesniffer": "^3.0",
-        "jangregor/phpstan-prophecy": "^0.4.2",
+        "jangregor/phpstan-prophecy": "*",
         "phpstan/phpstan": "@stable",
         "phpunit/phpunit": "^8.0"
     },
