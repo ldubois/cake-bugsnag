@@ -4,7 +4,6 @@ namespace Ldubois\Bugsnag\Error;
 
 use Cake\Core\InstanceConfigTrait;
 use Cake\Error\FatalErrorException;
-use Cake\Error\PHP7ErrorException;
 use Cake\Log\Log;
 use ErrorException;
 use Exception;
@@ -16,7 +15,6 @@ trait BugsnagErrorHandlerTrait
     /**
      * Generates a formatted error message with exception.
      *
-     * @see \Cake\Error\BaseErrorHandler::_getMessage()
      *
      * @param Exception $exception subject
      * @return string Formatted message
@@ -64,9 +62,7 @@ trait BugsnagErrorHandlerTrait
     {
         $config = $this->_options;
 
-        $unwrapped = $exception instanceof PHP7ErrorException ?
-            $exception->getError() :
-            $exception;
+        $unwrapped =     $exception;
 
         if (empty($config['log'])) {
             return false;
