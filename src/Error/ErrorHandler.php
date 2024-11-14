@@ -1,9 +1,9 @@
 <?php
 namespace Ldubois\Bugsnag\Error;
 
-use Cake\Error\ErrorHandler as CakeErrorHandler;
+use Cake\Error\ErrorTrap;
 
-class ErrorHandler extends CakeErrorHandler
+class ErrorHandler extends ErrorTrap
 {
     use BugsnagErrorHandlerTrait;
 }
